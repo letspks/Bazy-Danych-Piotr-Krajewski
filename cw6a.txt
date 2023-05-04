@@ -1,0 +1,38 @@
+Zad 1
+Id_produktu -> nazwa_produktu, cena_produktu, VAT
+id_klienta -> nazwa_klienta
+nazwa_klienta -> id_klienta
+cena_produktu -> suma_brutto, suma_netto
+ilość -> suma_netto
+suma_netto, VAT -> suma_brutto
+
+
+
+Zależności wielofunkcyjne:
+cena_produktu, ilość, VAT -> suma_brutto
+cena_produktu, ilość -> netto
+suma_netto, VAT -> suma_brutto
+id_produktu, data_zamowienia, id_klienta, ilość -> suma_brutto
+
+Zad 2
+
+Klucze:
+id_zamówienia (Primary KEY)
+id_produktu, id_klienta
+id_produktu id_klienta + data_zamowienia
+id_produktu, id_klienta + data_zamowienia, ilość
+id_klienta
+nazwa_produktu 
+nazwa_klienta
+
+Zad 3
+id_pomieszczenia -> numer_pomieszczenia, id_budynku, powierzchnia, liczba_okien, liczba_drzwi
+numer_pomieszczenia ->id_pomieszczenia, id_budynku, powierzchnia, liczba_okien, liczba_drzwi
+id_budynku -> ulica, miasto , kod_pocztowy
+
+Zależności:
+ ulica, miasto -> kod_pocztowy
+ 
+ Klucze:
+ id_pomieszczenia
+ id_budynku + numer_pomieszczenia
